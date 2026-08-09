@@ -6,7 +6,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Hello Kitty - Efecto de Dibujo</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 
@@ -14,11 +14,6 @@
     <div class="container">
         <div class="drawing-area">
             <!-- SVG de Hello Kitty sin texto interno -->
-              <div class="brother-label">
-                De tu Hermano <span class="brother-number">#1</span><br>
-                    para ti ❤️
-    </div>
-    <button id="continueBtn" class="continue-btn hidden">Continuar</button>
             <svg class="hello-kitty-svg" viewBox="0 0 192.756 192.756" xmlns="http://www.w3.org/2000/svg">
                 <!-- Contorno principal de la cabeza -->
                 <path class="main-outline" d="M106.252 10.438c10.022-2.704 16.052 4.681 18.728 8.027.67 1.338 1.336.668 3.346 0 6.688-3.346 20.064-6.689 25.416-4.682 4.686 2.673 8.027 14.046 8.027 21.404 0 1.338 0 2.006 1.34 3.346 2.674 2.008 6.688 10.036.67 20.737-.67.67-1.342 1.34-.67 2.676 2.006 3.346 4.012 12.711 4.682 16.055 0 2.678.67 2.008 2.008 2.008 2.006 0 8.693.669 11.369.669 2.676.668 5.352 4.014 0 4.014h-10.033c-2.01 0-3.344 0-3.344 2.006 0 1.338-.67 6.691-.67 7.359 0 1.338.67 2.006 2.678 2.676 2.006 0 7.357 1.338 8.693 2.006.67 0 2.01 2.007 0 2.678-2.006.669-6.688 0-10.031-.671-2.012 0-2.678.671-3.346 2.007 0 .668-2.006 5.352-2.678 6.689-.668 1.339-.668 1.339.672 2.009 1.334.668 6.016 3.344 8.695 4.681 4.012 2.01 2.676 5.354-.67 4.016-2.011-.668-7.355-2.677-9.365-4.016-2.006-.667-2.676-.667-4.013.001-4.017 6.021-10.508 10.407-16.726 13.382-12.895 6.174-49.505 13.771-87.62-1.34-5.314-2.105-10.038-5.352-14.049-8.695-.669-.668-1.339-.668-2.675 0-2.011 1.338-7.361 4.014-10.703 6.02-2.009 2.009-4.681 0-2.675-2.675 2.005-2.007 8.697-6.022 10.032-6.69 1.335 0 2.01-.668.67-2.006-1.341-1.338-3.347-4.684-4.012-6.689-.674-1.338-1.34-1.338-3.346-1.338-2.008.67-4.014.67-6.69 1.338s-2.676-2.677 0-3.344c1.339-.673 4.011-2.008 5.351-2.008 1.339-.669 2.006-.669 1.339-2.009-.669-1.338-2.008-6.687-2.008-8.695-.67-1.338-.67-1.338-2.005-1.338-1.337 0-9.367.67-11.372.67-3.347 1.335-4.012-2.678 0-3.346 2.005-1.339 7.355-1.339 10.035-2.008 1.337 0 2.672 0 2.672-.668C23.31 73.99 26.654 64.622 30 58.603c1.336-3.344 1.336-2.676.665-5.352-2.674-8.027-3.344-20.069 2.006-30.772 2.681-3.345 4.686-6.022 10.702-6.022 5.352.671 17.781 5.568 21.796 7.574 2.313 1.799 4.626.257 6.939-.258 2.314-.514 14.65-1.799 21.077-1.542 1.286-1.285 5.569-9.772 13.067-11.793z" fill="#000" stroke="#000" stroke-width="3"/>
@@ -53,6 +48,12 @@
                 <path class="whisker-right-3" d="M132 105c15 -2 25 -5 30 -3" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
             </svg>
         </div>
+
+        <!-- Texto al costado del dibujo -->
+        <div class="brother-label">
+            Hermano <span class="brother-number">#1</span><br>
+            para ti ❤️
+        </div>
         
         <button id="continueBtn" class="continue-btn hidden">Continuar</button>
     </div>
@@ -61,9 +62,7 @@
     <div id="romanticMessage" class="romantic-message">
         <button class="close-message" onclick="closeMessage()">&times;</button>
         <div class="romantic-text typing-text" id="typingText">
-            Ojalá hermana nunca dudes de tu valor...
-            quiero verte feliz , triunfando... quiero que sea incluso mejor que yo.
-            Siempre..
+            Cada línea trazada es como cada momento contigo...
         </div>
         <div class="romantic-subtitle">
             Perfecta, única y llena de amor ✨
