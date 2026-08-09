@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Hello Kitty - Efecto de Dibujo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS crítico inline para móvil */
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+        }
+        .hidden { 
+            display: none !important; 
+        }
+        /* Optimización específica para móvil */
+        @media (max-width: 768px) {
+            .romantic-text {
+                font-size: 4rem !important;
+                line-height: 1.2 !important;
+                text-align: center !important;
+                padding: 20px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+            }
+            .typing-text {
+                white-space: normal !important;
+                text-align: center !important;
+                display: block !important;
+                width: 100% !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .romantic-text {
+                font-size: 3.8rem !important;
+                line-height: 1.2 !important;
+                padding: 30px 15px !important;
+            }
+        }
+        @media (max-width: 360px) {
+            .romantic-text {
+                font-size: 3.5rem !important;
+                line-height: 1.2 !important;
+                padding: 25px 10px !important;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="drawing-area">
+            <!-- SVG de Hello Kitty sin texto interno -->
+              <div class="brother-label">
+                De tu Hermano <span class="brother-number">#1</span><br>
+                    para ti ❤️
+    </div>
+    <button id="continueBtn" class="continue-btn hidden">Continuar</button>
+            <svg class="hello-kitty-svg" viewBox="0 0 192.756 192.756" xmlns="http://www.w3.org/2000/svg">
+                <!-- Contorno principal de la cabeza -->
+                <path class="main-outline" d="M106.252 10.438c10.022-2.704 16.052 4.681 18.728 8.027.67 1.338 1.336.668 3.346 0 6.688-3.346 20.064-6.689 25.416-4.682 4.686 2.673 8.027 14.046 8.027 21.404 0 1.338 0 2.006 1.34 3.346 2.674 2.008 6.688 10.036.67 20.737-.67.67-1.342 1.34-.67 2.676 2.006 3.346 4.012 12.711 4.682 16.055 0 2.678.67 2.008 2.008 2.008 2.006 0 8.693.669 11.369.669 2.676.668 5.352 4.014 0 4.014h-10.033c-2.01 0-3.344 0-3.344 2.006 0 1.338-.67 6.691-.67 7.359 0 1.338.67 2.006 2.678 2.676 2.006 0 7.357 1.338 8.693 2.006.67 0 2.01 2.007 0 2.678-2.006.669-6.688 0-10.031-.671-2.012 0-2.678.671-3.346 2.007 0 .668-2.006 5.352-2.678 6.689-.668 1.339-.668 1.339.672 2.009 1.334.668 6.016 3.344 8.695 4.681 4.012 2.01 2.676 5.354-.67 4.016-2.011-.668-7.355-2.677-9.365-4.016-2.006-.667-2.676-.667-4.013.001-4.017 6.021-10.508 10.407-16.726 13.382-12.895 6.174-49.505 13.771-87.62-1.34-5.314-2.105-10.038-5.352-14.049-8.695-.669-.668-1.339-.668-2.675 0-2.011 1.338-7.361 4.014-10.703 6.02-2.009 2.009-4.681 0-2.675-2.675 2.005-2.007 8.697-6.022 10.032-6.69 1.335 0 2.01-.668.67-2.006-1.341-1.338-3.347-4.684-4.012-6.689-.674-1.338-1.34-1.338-3.346-1.338-2.008.67-4.014.67-6.69 1.338s-2.676-2.677 0-3.344c1.339-.673 4.011-2.008 5.351-2.008 1.339-.669 2.006-.669 1.339-2.009-.669-1.338-2.008-6.687-2.008-8.695-.67-1.338-.67-1.338-2.005-1.338-1.337 0-9.367.67-11.372.67-3.347 1.335-4.012-2.678 0-3.346 2.005-1.339 7.355-1.339 10.035-2.008 1.337 0 2.672 0 2.672-.668C23.31 73.99 26.654 64.622 30 58.603c1.336-3.344 1.336-2.676.665-5.352-2.674-8.027-3.344-20.069 2.006-30.772 2.681-3.345 4.686-6.022 10.702-6.022 5.352.671 17.781 5.568 21.796 7.574 2.313 1.799 4.626.257 6.939-.258 2.314-.514 14.65-1.799 21.077-1.542 1.286-1.285 5.569-9.772 13.067-11.793z" fill="#000" stroke="#000" stroke-width="3"/>
+                
+                <!-- Cara blanca -->
+                <path class="face" d="M96.218 53.251c4.011 2.008 9.362 2.676 15.382.667 3.346-1.335 4.012-2.005 5.353 0 1.34 3.346 7.356 6.692 10.702 6.692 2.005 0 2.005.668 2.675 2.006 1.34 2.005 5.353 8.697 12.709 10.033 4.015 0 8.694-1.335 13.377-5.351 1.34-.668 2.011-2.006 3.347 0 1.34 2.678 2.674 9.368 2.674 11.374 0 1.338-.668 2.008-.668 2.008-2.006.668-5.353.668-6.688 1.338-2.677.668-2.677 3.344-1.341 4.012 2.011.669 4.017 0 6.021-.668 2.006 0 2.674 0 2.674 1.338 0 2.006 0 6.02-.668 7.359 0 1.338-.666 1.338-1.336 1.338h-3.346c-1.336.668-2.006 1.338-1.336 2.676 1.336 1.339 2.676 1.338 4.012 1.338 1.34.668-2.006 6.689-2.676 8.027-.67 2.006-2.006 1.338-3.346 1.338-1.336 0-3.342-.67-4.012.668-.67 1.339-.67 1.339.67 2.677.666.67 2.676.67 2.006 2.008-1.34 2.006-7.357 8.027-18.729 12.041-15.383 5.351-38.127 6.69-60.868 2.007-13.381-2.677-22.744-6.688-28.094-11.374-1.341-.668 0-1.336.665-2.005 1.34 0 2.679-.669 2.679-2.007.666-.67 0-2.008-2.005-2.008-.674 0-3.345.67-4.687 1.338-1.339.67-1.339 0-2.675-.668-2.005-2.009-3.341-5.353-4.016-6.021-.665-1.337 0-1.337 1.341-2.01 1.339 0 3.344-.667 4.011-1.335.67-.669-.667-2.676-2.671-2.009h-4.016c-.671 0-.67-.667-1.335-1.338C31.336 96.734 30 92.051 30 90.715c0-1.34.665-.67 2.006-.67h6.017c1.339-.67 1.339-2.676.669-3.346-.669-.669-4.681-1.338-7.356-1.338-2.677 0-2.01-.668-2.01-4.014 0-7.357 3.345-18.061 8.031-26.088 1.335-2.008 3.342-4.013 3.342-5.352 0-2.008-2.006-3.346-3.342-2.008-1.339.669-1.339 1.338-2.005 0-4.015-10.706 1.604-22.354 4.677-24.753 3.808-2.972 19.497 4.228 25.656 7.309 1.027.514 4.682-.515 6.425-1.028 3.277-.964 18.507-1.8 18.507-1.8s.386.258-.386 2.378c-.772 2.121-5.375 15.647 5.987 23.246z" fill="#ffffff" stroke="#000" stroke-width="2"/>
+                
+                <!-- Lazo rojo -->
+                <path class="bow" d="M94.208 41.21c1.34 7.359 6.021 10.036 14.717 8.697 2.006-.67 4.012-1.338 4.682-2.008s.67-2.008.67-2.676c-.67-.67-6.688-2.006-6.02-8.698.668-6.02 6.02-7.357 7.355-7.357 4.016-.67 6.689 2.006 7.359 2.675.668.668 2.006-.669 2.006-2.007-.668-3.344-4.01-8.028-6.021-10.703-1.336-1.338-4.683-5.35-10.032-4.015-8.027 2.677-14.716 17.394-14.716 26.092z" fill="#cc2229" stroke="#000" stroke-width="1.5"/>
+                
+                <path class="bow-detail" d="M139.026 46.562c-.67 4.684-3.346 7.357-5.352 8.697-6.691 3.344-16.053-2.008-14.717-10.705.67-4.012 2.676-7.36 6.689-8.028 8.701-3.344 14.714 4.016 13.38 10.036z" fill="#cc2229" stroke="#000" stroke-width="1.5"/>
+                
+                <path class="bow-center" d="M143.709 55.259c-1.336 0-3.349 0-2.679-.67.673-1.338 2.009-3.343 2.009-4.682.67-.67 1.338 0 2.008 1.338.668 1.338 0 3.344-1.338 4.014z" fill="#cc2229"/>
+                
+                <!-- Ojos -->
+                <path class="eye-left" d="M54.158 95.498c0 2.676 1.334 5.351 4.681 5.351 4.011 0 5.352-3.343 5.352-6.019s-.671-7.359-5.352-7.359c-4.011 0-4.681 4.683-4.681 8.027z" fill="#000"/>
+                
+                <path class="eye-right" d="M124.772 93.391c0 4.01 2.01 6.687 6.021 6.687 2.674 0 4.684-2.677 4.684-6.019 0-4.684-2.01-6.69-5.35-6.69-4.017 0-5.355 4.014-5.355 6.022z" fill="#000"/>
+                
+                <!-- Nariz -->
+                <path class="nose" d="M87.77 104.762c0 4.683 4.011 6.69 8.696 6.69 5.348 0 8.021-3.346 8.021-6.021s-3.346-6.02-8.021-6.02c-6.026 0-8.696 2.676-8.696 5.351z" fill="#000"/>
+                
+                <path class="nose-inner" d="M91.781 105.431c0 2.008 2.005 2.676 4.685 2.676 2.672 0 4.012-.668 4.012-2.676 0-2.009-2.006-2.676-4.687-2.676-2.005 0-4.01.667-4.01 2.676z" fill="#f2c831"/>
+                
+                <!-- Bigotes -->
+                <path class="whisker-left-1" d="M30 85c15 2 25 5 30 8" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+                <path class="whisker-left-2" d="M25 95c15 0 25 2 35 3" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+                <path class="whisker-left-3" d="M30 105c15 -2 25 -5 30 -3" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+                
+                <path class="whisker-right-1" d="M132 85c15 2 25 5 30 8" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+                <path class="whisker-right-2" d="M137 95c15 0 25 2 30 3" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+                <path class="whisker-right-3" d="M132 105c15 -2 25 -5 30 -3" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </div>
+        
+        <button id="continueBtn" class="continue-btn hidden">Continuar</button>
+    </div>
+
+    <!-- Mensaje romántico -->
+    <div id="romanticMessage" class="romantic-message">
+        <button class="close-message" onclick="closeMessage()">&times;</button>
+        <div class="romantic-text typing-text" id="typingText">
+            Ojalá hermana nunca dudes de tu valor...
+            quiero verte feliz , triunfando... quiero que sea incluso mejor que yo.
+            Siempre..
+        </div>
+        <div class="romantic-subtitle">
+            Perfecta, única y llena de amor ✨
+        </div>
+        
+        <!-- Corazones profesionales -->
+        <div class="hearts-container" id="heartsContainer">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
